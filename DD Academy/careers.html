@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Training</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <!-- Add Bootstrap CSS -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <!-- FontAwesome for icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="stylesheet" href="assets/main.css">
+
+<style>
+    /* Page Title Styles */
+.page-title.animatedBackground {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+}
+
+/* FAQ Area Styles */
+.faq-area {
+    /*padding-top: 100px;*/
+    padding-bottom: 100px;
+    background-color: #fff;
+}
+
+.faq-area h3 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* FAQ Item Styles */
+.faq .accordion-title {
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    background-color: #f0f0f0;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.faq .accordion-title:hover {
+    background-color: #e0e0e0;
+}
+
+.faq .accordion-content {
+    display: none;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Form Styles */
+.analysis-form {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.analysis-form h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.analysis-form .form-group {
+    margin-bottom: 15px;
+}
+
+.analysis-form input[type="text"],
+.analysis-form input[type="email"],
+.analysis-form input[type="tel"],
+.analysis-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.analysis-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.analysis-form button:hover {
+    background-color: #0056b3;
+}
+
+</style>
+
+</head>
+
+<body>
+    <main> 
+        <header class="header bg-warning text-white py-2 d-none d-md-block">
+    <div class="container">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-md-6 d-flex">
+                <div class="contact-info mr-4">
+                    <i class="fas fa-envelope"></i>&nbsp;&nbsp;<a href="mailto:info@dreamdevtraings.com" class="text-white">hr@dreamdevtrainings.com
+                    </a> &nbsp;|&nbsp;
+                    <i class="fas fa-phone"></i> Online: <a href="tel:+6303704659" class="text-white">+91-6303704659</a>
+                </div>
+            </div>
+            <div class="col-md-6 text-md-right">
+                <a href="#" class="text-white mr-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white mr-2"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="text-white mr-2"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <a class="navbar-brand" href="Home.Html">
+        <img src="assets/images/Dreamdev Academy PNG. (1).png" alt="Logo" width="200px">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="Home.Html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="About.html">About</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Trainings
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="Online.html">Online</a>
+                    <a class="dropdown-item" href="Classroom.html">Classroom</a>
+                    <a class="dropdown-item" href="corporate.html">Corporate</a>
+                    <a class="dropdown-item" href="Elearning.html">E-Learning</a>
+                </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Certification</a>
+          </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Courses
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                  <a class="dropdown-item" href="Ai&Ml.Html">AI & ML</a>
+                  <a class="dropdown-item" href="Cybersecurity.html">Cyber Security</a>
+                  <a class="dropdown-item" href="Mern.html">Mern Full Stack</a>
+                  <a class="dropdown-item" href="Scrum-master.html">Scrum Master</a>
+                  <a class="dropdown-item" href="Dataanalytics.html">Data Analytics Using python</a>
+                  <a class="dropdown-item" href="Java.html">Java Fullstack</a>
+                  <a class="dropdown-item" href="Reactjs.Html">React Js</a>
+                  <a class="dropdown-item" href="Nodejs.html">Node Js</a>
+                  <a class="dropdown-item" href="Devops.html">Devops With AWS</a>
+                  <a class="dropdown-item" href="Flutter.html">Flutter </a>
+                  <a class="dropdown-item" href="Php.html">PHP</a>
+                  <a class="dropdown-item" href="Autocad.html">Autocad</a>
+                  <a class="dropdown-item" href="Testing.html">Software Testing</a>
+                  <a class="dropdown-item" href="Digitalmarketing.html">Digital Marketing</a>
+                  <a class="dropdown-item" href="communications.html">Communication & Personality development</a>
+                  <a class="dropdown-item" href="Aptitude.html">Aptitude and Reasoning</a>
+
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="careers.html">Careers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Successstory.html">Success Stories</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Gallery</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Contact.html ">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- Navbar End -->
+    <!-- Full Screen Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center justify-content-center">
+                    <div class="input-group" style="max-width: 600px;">
+                        <input type="text" class="form-control bg-transparent border-primary p-3" placeholder="Type search keyword">
+                        <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Full Screen Search End -->
+
+
+    <!-- End Page Title -->
+    
+<!-- Career Area -->
+<div class="faq-area ptb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+            <div class="faq">
+         <ul class="accordion">
+        <!-- Job Roles -->
+       
+            <li  style="margin-top: 60px;" class="accordion-item">
+                <a class="accordion-title" href="javascript:void(0)" onclick="toggleAccordion(0)">Artificial Intelligence And Machine Learning</a>
+                <p class="accordion-content" align="justify" style="display:none;">Artificial Intelligence(AI) is a branch of computer science that focuses on creating systems or machines capable of performing tasks that typically require human intelligence. Machine Learning (ML) is a subset of AI that uses statistical techniques to enable computers to "learn" from data.:<br>
+                    <b>Responsibilities:</b><br>
+                    -> Data Handling and Preparation.<br>
+                    -> Model Development<br>
+                    -> Deployment and Maintenance<br>
+                    -> Innovation and Research <br>
+                </p>
+            </li>
+    
+            <li style="margin-top: -40px;" class="accordion-item">
+                <a class="accordion-title" href="javascript:void(0)" onclick="toggleAccordion(1)">Cyber Security</a>
+                <p class="accordion-content" align="justify" style="display:none;">Cybersecurity is the practice of protecting computer systems, networks, and data from digital attacks, unauthorized access, damage, or theft. The goal of cybersecurity is to ensure the confidentiality, integrity, and availability of information and to protect against various cyber threats that can exploit vulnerabilities in hardware, software, and organizational procedures.:<br>
+                <b>Responsibilities</b><br>
+                -> Encryption<br>
+                -> Firewalls<br>
+                -> Multi-Factor Authentication<br>
+                -> Antivirus Software<br>
+                -> Access Control<br>
+                 </p>
+             </li>
+             <li style="margin-top: -40px;" class="accordion-item">
+                <a class="accordion-title" href="javascript:void(0)" onclick="toggleAccordion(2)">MERN Fullstack</a>
+                <p class="accordion-content" align="justify" style="display:none;">The MERN stack is a collection of technologies that help developers build robust and scalable web applications using JavaScript. The acronym “MERN” stands for MongoDB, Express, React, and Node. js, with each component playing a role in the development process.Web development refers to the creating, building, and maintaining of websites.:<br>
+                <b>Responsibilities</b><br>
+                -> MongoDB<br>
+                -> Express.js<br>
+                -> Node.js<br>
+                -> React.js<br>
+
+                 </p>
+             </li> 
+             <li style="margin-top: -40px;" class="accordion-item">
+                <a class="accordion-title" href="javascript:void(0)" onclick="toggleAccordion(3)">Scrum Master</a>
+                <p class="accordion-content" align="justify" style="display:none;">As a Scrum Master, your role involves facilitating Agile practices and ensuring that the Scrum team adheres to Scrum principles. Here are some key responsibilities:<br>
+                <b>Responsibilities:</b><br>
+                    -> Facilitate daily stand-ups, sprint planning, and retrospectives.<br>
+                    -> Remove impediments and protect the team from external distractions.<br>
+                    -> Ensure the team follows Scrum processes and practices.<br>
+                    -> Foster a collaborative and productive team environment.<br>
+                </p>
+           </li>
+           <li style="margin-top: -40px;"  class="accordion-item">
+            <a class="accordion-title" href="javascript:void(0)" onclick="toggleAccordion(4)">Data Analytics Using Python</a>
+            <p class="accordion-content" align="justify" style="display:none;">Data Analytics using Python refers to the process of analyzing, interpreting, and deriving insights from data using Python programming. Python is one of the most popular programming languages for data analytics due to its simplicity, flexibility, and the availability of powerful libraries and tools.:<br>
+            <b>Responsibilities:</b><br>
+                -> Infrastructure as Code (IaC).<br>
+                -> Continuous Integration/Continuous Deployment (CI/CD).<br>
+                -> Monitoring and Logging.<br>
+                -> Security and Compliance.<br>
+                </p>
+         </li>
+         <li style="margin-top: -40px;" class="accordion-item">
+            <a class="accordion-title" href="javascript:void(0)" onclick="toggleAccordion(5)">Java Fullstack With Springboot Framework </a>
+            <p class="accordion-content" align="justify" style="display:none;">A Java Full Stack Developer is a software engineer proficient in both front-end and back-end development using Java and related technologies. Here are the main aspects of this role:<br>
+                <b>Responsibilities:</b><br>
+                -> Front-End Development<br>
+                ->  Back-End Development<br>
+                ->  DevOps & Tools<br>
+                ->  Soft Skills <br>
+                ->  Experience & Projects <br>
+            </p>
+         </li>
+         <li style="margin-top: -40px;" class="accordion-item">
+            <a class="accordion-title" href="javascript:void(0)" onclick="toggleAccordion(6)">Python Fullstack With Django Framework </a>
+            <p class="accordion-content" align="justify" style="display:none;">As a Python with Data Analytics specialist, your role involves analyzing data using Python to extract insights and support decision-making. Here are some key content areas:<br>
+            <b>Responsibilities:</b><br>
+                -> Data cleaning and preprocessing.<br>
+                -> Data visualization and reporting.<br>
+                -> Statistical analysis and modeling.<br>
+                ->Machine learning algorithms.<br>
+                -> Python libraries such as Pandas, NumPy, and Matplotlib.<br>
+                </p>
+         </li>
+         <li style="margin-top: -40px;" class="accordion-item">
+            <a class="accordion-title" href="javascript:void(0)" onclick="toggleAccordion(7)">React Js</a>
+            <p class="accordion-content" align="justify" style="display:none;">React.js (or simply React) is a popular open-source JavaScript library used for building user interfaces (UIs), particularly for single-page applications (SPAs). It was developed and is maintained by Facebook (now Meta) and is widely used for building modern, interactive, and dynamic web applications.
+
+                React allows developers to create reusable UI components, making it easier to build and maintain complex UIs. It focuses primarily on the view layer in the Model-View-Controller (MVC) architecture.:<br>
+            <b>Required Skills:</b><br>
+            -> Single PAge Appications<br>
+            -> Dashboards<br>
+            -> E-commerce Applications<br>
+            -> Social Media Platforms<br>
+            -> Mobile Appilications<br>
+             </p>
+         </li>
+
+         <li style="margin-top: -40px;" class="accordion-item">
+            <a class="accordion-title" href="javascript:void(0)" onclick="toggleAccordion(8)">Node Js</a>
+            <p class="accordion-content" align="justify" style="display:none;">Node.js is an open-source, cross-platform JavaScript runtime built on the V8 JavaScript engine (the same engine that powers Google Chrome). It allows developers to execute JavaScript code outside of a web browser, typically on the server-side. Node.js is designed to build scalable and fast network applications, particularly for I/O-heavy operations such as web servers, APIs, and real-time applications.:<br>
+            <b>Required Skills:</b><br>
+            -> Building API's<br>
+            -> Real Time Applications<br>
+            -> Single Page Applications<br>
+            -> Streaming Servives<br>
+            -> IOT Applications<br>
+             </p>
+         </li>
+
+         <li  style="margin-top: -40px;"class="accordion-item">
+            <a class="accordion-title" href="javascript:void(0)" onclick="toggleAccordion(9)">Devops with AWS</a>
+            <p class="accordion-content" align="justify" style="display:none;">AWS (Amazon Web Services) with DevOps is a powerful combination that leverages the cloud platform’s infrastructure, tools, and services to implement DevOps practices.:<br>
+                <b>Responsibilities:</b><br>
+                -> Infrastructure as Code (IaC).<br>
+                -> Continuous Integration/Continuous Deployment (CI/CD).<br>
+                -> Monitoring and Logging.<br>
+                -> Security and Compliance.<br>
+            </p>
+        </li>
+
+        <li style="margin-top: -40px;" class="accordion-item">
+            <a class="accordion-title" href="javascript:void(0)" onclick="toggleAccordion(10)">Flutter Mobile App Developement </a>
+            <p class="accordion-content" align="justify" style="display:none;">As a Mobile Apps Developer (Flutter), your role involves developing cross-platform mobile applications using the Flutter framework. Here are some key responsibilities:<br>
+            <b>Responsibilities:</b><br>
+                -> Develop fully functional mobile applications using Flutter.<br>
+                -> Ensure the performance, quality, and responsiveness of applications.<br>
+                -> Collaborate with the design and product teams to create seamless user experiences.<br>
+                -> Write clean and maintainable code.<br>
+                </p>
+        </li>
+
+        <li style="margin-top: -40px;"  class="accordion-item">
+            <a class="accordion-title" href="javascript:void(0)" onclick="toggleAccordion(11)"> PHP Fullstack With Laravel Framework</a>
+            <p class="accordion-content" align="justify" style="display:none;">As a Full Stack Developer, your role involves working on both the front end and back end of web applications, handling various aspects of software development. Here's an overview of some of the key content areas you might encounter or work with:<br>
+            <b>Required Skills:</b><br>
+            -> HTML<br>
+            -> CSS<br>
+            -> Javascript<br>
+            -> Python<br>
+            -> MySql<br>
+            -> Git<br>
+            -> Django Framework<br>
+             </p>
+         </li>
+        
+    
+    
+    
+    
+            <li style="margin-top: -40px;" class="accordion-item">
+                        <a class="accordion-title" href="javascript:void(0)" onclick="toggleAccordion(12)">Software Testing </a>
+                        <p class="accordion-content" align="justify" style="display:none;">Software testing is the process of evaluating and verifying that a software application or system meets specified requirements. The primary goal is to identify and fix bugs, ensure quality, and validate that the software functions as expected. It is a critical phase in the software development lifecycle (SDLC) to ensure reliability, performance, and usability.:<br>
+                            <b>Responsibilities:</b><br>
+                            -> Improved Product Quality..<br>
+                            -> Enhanced Customer Satisfaction.<br>
+                            -> Reduced Maintenance Costs.<br>
+                            -> Compliance with Standards<br>
+                       </p>
+            </li>
+    
+             
+    
+    
+
+    
+                <li style="margin-top: -40px;" class="accordion-item">
+                    <a class="accordion-title" href="javascript:void(0)" onclick="toggleAccordion(13)">Digital Marketing </a>
+                    <p class="accordion-content" align="justify" style="display:none;">Digital marketing is the use of electronic devices and the internet to promote products or brands. It's a broad category that includes online marketing, which is marketing that's conducted exclusively on the internet. <br>
+                    <b>Responsibilities:</b><br>
+                        -> Optimize your Google My Business profile.<br>
+                        ->Use landing pages tailored to specific campaigns.<br>
+                        -> Use SMS marketing for direct engagement.<br>
+                        ->Focus on customer service to build trust and loyalty.<br>
+                        ->Automate follow-ups with drip campaigns.<br>
+                        </p>
+                 </li>
+    
+                 <li style="margin-top: -40px;" class="accordion-item">
+                    <a class="accordion-title" href="javascript:void(0)" onclick="toggleAccordion(14)">Auto Cad</a>
+                    <p class="accordion-content" align="justify" style="display:none;">AutoCAD is a computer-aided design (CAD) software developed by Autodesk. It is widely used by professionals such as architects, engineers, and designers for creating 2D and 3D designs, drawings, and models. AutoCAD is known for its precision, versatility, and extensive feature set, making it a standard tool in industries that require detailed design and drafting.:<br>
+                        <b>Responsibilities:</b><br>
+                        -> Architecture:.<br>
+                        -> Engineering:.<br>
+                        -> Interior Design:<br>
+                        -> Product Design:<br>
+              </p>
+            </li>
+    
+    
+                 <li style="margin-top: -40px;" class="accordion-item">
+                    <a class="accordion-title" href="javascript:void(0)" onclick="toggleAccordion(15)">Communication and Personality Developmant </a>
+                    <p class="accordion-content" align="justify" style="display:none;">Communication and personality development are important aspects of life that can help people in many ways, including:
+                        Building relationships
+                        Communication and personality development can help people build trust, understanding, and compassion with others. 
+                        <br>
+                        <b>Responsibilities:</b><br>
+                        -> Tone: Maintain a professional and friendly tone.<br>
+                        ->  Practice regularly to build confidence.<br>
+                        -> Be open to feedback without being defensive.<br>
+                        ->  Gestures: Use hand gestures naturally to emphasize points. <br>
+                        
+                    </p>
+                 </li>
+    
+    
+    
+    
+                 
+    
+    
+    
+    
+                  <li style="margin-top: -40px;" class="accordion-item">
+                    <a class="accordion-title" href="javascript:void(0)" onclick="toggleAccordion(16)">Apptitude and Resoning</a>
+                    <p class="accordion-content" align="justify" style="display:none;">Aptitude and reasoning are related to a person's ability to learn and perform tasks, and their ability to think logically and make decisions
+    
+                    <b>Required Skills:</b><br>
+                    -> Understand how to simplify and solve ratio problems.<br>
+                    -> Work on direct and inverse variation problems.<br>
+                    -> Focus on series (numeric, alphabetic), analogies, and visual patterns.<br>
+                    -> Learn to identify letter/number codes and decode them.<br>
+                   
+                     </p>
+                 </li>
+    
+    
+    
+    
+                
+    </ul>
+</div>
+</div>
+
+<script>
+function toggleAccordion(index) {
+    var accordions = document.querySelectorAll('.accordion-content');
+    accordions.forEach(function(accordion, i) {
+        if (i === index) {
+            accordion.style.display = accordion.style.display === 'block' ? 'none' : 'block';
+        } else {
+            accordion.style.display = 'none';
+        }
+    });
+}
+</script>
+
+
+            <!-- Form Section -->
+             <br><br><br>
+
+             <br>
+            <div class="col-lg-6 col-md-6 mt-5">
+               <form action="careers.php" method="post" enctype="multipart/form-data">
+    <div class="analysis-form">
+        <h3 >Your Details</h3>
+        <div class="form-group">
+            <label for="name">Name*</label>
+            <input type="text" name="name" id="name" placeholder="Enter your Name" class="form-control" required>
+        </div>
+        <script>
+
+            document.getElementById('name').addEventListener('input', function (event) {
+
+              const input = event.target;
+
+              const value = input.value;
+
+          
+
+              // Remove any character that is not a letter (including spaces and special characters)
+
+              input.value = value.replace(/[^a-zA-Z\s]/g, '');
+
+            });
+
+          </script>
+
+        <!-- <div class="form-group">
+            <label for="email">Enter Your Email</label>
+            <input type="email" name="email" id="email" placeholder="Email*" class="form-control" required>
+        </div> -->
+
+
+        <div class="form-group">
+            <label for="email">Email*</label>
+            <input type="email" name="email" id="email" placeholder="Enter Your Email" class="form-control" required oninput="validateEmail()">
+        
+            <!-- Error message -->
+            <div id="emailError" class="error-message">Email must start with an alphabet and follow a valid format.</div>
+        </div>
+        
+        <style>
+            /* Styling for the alert message */
+            .error-message {
+                color: red;
+                font-size: 14px;
+                display: none; /* Initially hidden */
+            }
+        </style>
+        
+        <script>
+            function validateEmail() {
+                const emailInput = document.getElementById("email");
+                const errorMessage = document.getElementById("emailError");
+        
+                // Regular expression to ensure the email starts with an alphabet
+                const regex = /^[a-zA-Z][a-zA-Z0-9._%+-]*@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        
+                if (!regex.test(emailInput.value)) {
+                    // Show the error message if the pattern does not match
+                    errorMessage.style.display = "block";
+                } else {
+                    // Hide the error message if the pattern matches
+                    errorMessage.style.display = "none";
+                }
+            }
+        </script>
+        
+
+        <!-- <div class="form-group">
+            <label for="phone">Enter Your Number</label>
+            <input type="text" name="phone" id="phone" placeholder="Phone*" class="form-control" required  maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);">
+        </div> -->
+
+        <div style="margin-top:-5px;" class="col-12">
+            <label for="phone">Phone*</label>
+            <input style="width: 100%;" type="tel" class="form-control" placeholder="Enter your Number" 
+                   name="phone" id="phone" required oninput="validateNumber(this)">
+            
+            <!-- Error message for invalid phone number -->
+            <div id="phoneError" style="color: red; font-size: 14px; display: none;">Phone number must be exactly 10 digits.</div>
+        
+            <script>
+                function validateNumber(input) {
+                    // Only allow numeric characters and limit input to 10 digits
+                    input.value = input.value.replace(/\D/g, '').slice(0, 10);
+        
+                    // Get error message element
+                    const errorMessage = document.getElementById("phoneError");
+        
+                    // Show error if less than 10 digits; hide otherwise
+                    if (input.value.length < 10) {
+                        errorMessage.style.display = "block";
+                    } else {
+                        errorMessage.style.display = "none";
+                    }
+                }
+        
+                // Prevent form submission if phone number is not 10 digits
+                document.querySelector("form").addEventListener("submit", function(event) {
+                    const phoneInput = document.getElementById("phone");
+        
+                    if (phoneInput.value.length !== 10) {
+                        event.preventDefault(); // Stop form submission
+                        document.getElementById("phoneError").style.display = "block";
+                    }
+                });
+            </script>
+        </div>
+        
+
+        
+
+            <div class="form-group">
+                <label for="selectyourcourse">Select Your Job</label>
+                <select name="selectyourcourse" id="selectyourcourse" class="sai" required>
+                    <option value="">Select your job</option> <!-- Empty value to trigger validation -->
+                    <option value="Python Fullstack Developer">AI & ML</option>
+                    <option value="Python Fullstack Developer">Cyber Security</option>
+                    <option value="Python Fullstack Developer">Mern Full Stack Developer</option>
+                    <option value="Scrum Master">Scrum Master</option>
+                    <option value="Scrum Master">Data Analytics using Python</option>
+                    <option value="Java Fullstack Developer">Java Full Stack Developer</option>
+                    <option value="Python Fullstack Developer">Python Full Stack Developer</option>
+                    <option value="Java Fullstack Developer">React JS</option>
+                    <option value="Java Fullstack Developer">Node JS</option>
+                    <option value="Devops with AWS">Devops with AWS</option>
+                    <option value="Mobile Apps Developer (Flutter)">Flutter Mobile App Developer</option>
+                    <option value="PHP Fullstack Developer">PHP Full Stack Developer</option>
+                    <option value="QA Engineer">Software Testing</option>
+                    <option value="Digital Marketing Executive">Digital Marketing Executive</option>
+                    <option value="Mobile Apps Developer (Flutter)">Auto Cad</option>
+                    <option value="Mobile Apps Developer (Flutter)">Communication and Personality Development</option>
+                    <option value="Mobile Apps Developer (Flutter)">Aptitude & Reasoning</option>
+                    <option value="Mobile Apps Developer (Flutter)">Un predictable</option>
+
+
+                </select>
+            
+                <!-- Error message for invalid selection -->
+                <div id="jobError" style="color: red; font-size: 14px; display: none; margin-top: 5px;">Select your Job role</div>
+            
+                <script>
+                    // Event listener for form submission
+                    document.querySelector("form").addEventListener("submit", function(event) {
+                        const jobSelect = document.getElementById("selectyourcourse");
+                        const errorMessage = document.getElementById("jobError");
+            
+                        // Check if the selected option is the default (empty) option
+                        if (jobSelect.value === "") {
+                            event.preventDefault(); // Prevent form submission
+                            errorMessage.style.display = "block"; // Show error message
+                        } else {
+                            errorMessage.style.display = "none"; // Hide error message if valid option is selected
+                        }
+                    });
+            
+                    // Hide error when a valid option is selected
+                    document.getElementById("selectyourcourse").addEventListener("change", function() {
+                        const errorMessage = document.getElementById("jobError");
+                        if (this.value !== "") {
+                            errorMessage.style.display = "none";
+                        }
+                    });
+                </script>
+            </div>
+            
+        <!-- </div> -->
+
+        <div class="form-group">
+            <label for="resume">Upload Your Resume</label>
+            <input type="file" name="resume" id="resume" accept="application/pdf" class="form-control" required>
+            <!--<input type="file" name="resume" accept=".pdf, .doc, .docx">-->
+        </div>
+
+        <button type="submit" class="btn btn-primary">Apply Now</button>
+
+    </div>
+</form>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+ <!-- Footer Start -->
+ <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>Dreamdev Academy</h3>
+            <p>Unit no. 613, Manjeera Trinity Corporate, KPHB, Kukatpally Hyderabad, Telangana 500085</p>
+            <p>Contact us: +91-6303704659</p>
+        </div>
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="Home.Html">Home</a></li>
+                <li><a href="About.html">About Us</a></li>
+                <li><a href="Online.html">Trainings</a></li>                
+                <li><a href="#">Certification</a></li>
+                <li><a href="Python.html">Courses</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="Successstory.html">Success Stories</a></li>
+                <li><a href="">Gallery</a></li>
+                <li><a href="Contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Courses Offered</h3>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                 <ul>       
+                <li><a href="Ai&Ml.Html">AI&ML</a></li>
+                <li><a href="Cybersecurity.html">Cybersecurity</a></li>
+                <li><a href="Mern.html">Mern Fullstack</a></li>
+                <li><a href="Scrum-master.html">Scrum Master</a></li>
+                <li><a href="Dataanalytics.html">Data Analytics</a></li>
+                <li><a href="Java.html">Java Fullstack</a></li>
+                <li><a href="Python.html">Python FullStack</a></li>
+                <li><a href="Reactjs.Html">React-js</a></li>
+                 </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul>
+                            
+                            <li><a href="Nodejs.html">Node-js</a></li>
+                            <li><a href="Devops.html">Devops with AWS</a></li>
+                            <li><a href="Flutter.html">Flutter Mobile App Developement</a></li>
+                            <li><a href="Php.html">PHP Fullstack</a></li>
+                            <li><a href="Autocad.html">Autocad</a></li>
+                            <li><a href="Testing.html">Software Testing</a></li>
+                            <li><a href="Digitalmarketing.html">Digital Marketing</a></li>
+                            <li><a href="communications.html">Communication and Personality Development</a></li>
+                            <li><a href="Aptitude.html">Aptitude and Reasoning</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="footer-column">
+            <h3>Contact Us</h3>
+            <form action="#">
+                <style>
+                    .error-message {
+                      color: red;
+                      font-size: 0.9em;
+                      margin-top: 5px;
+                      display: none; /* Initially hidden */
+                    }
+                  </style>
+                    <input 
+                      type="email" 
+                      id="email" 
+                      placeholder="Your Email" 
+                      required>
+                    <div id="email-error" class="error-message">
+                      Email must start with an alphabet, but it can include numbers later.
+                    </div>
+                <!-- <input type="email" placeholder="Email" required> -->
+                <script>
+                    const emailInput = document.getElementById('email');
+                    const emailError = document.getElementById('email-error');
+                
+                    emailInput.addEventListener('input', function () {
+                      // Check if the email starts with an alphabet or not
+                      const startsWithAlphabetPattern = /^[a-zA-Z]/;
+                
+                      if (!startsWithAlphabetPattern.test(this.value) && this.value !== '') {
+                        // Show the warning message if the email doesn't start with an alphabet
+                        emailError.style.display = 'block';
+                      } else {
+                        // Hide the warning message when the input is valid
+                        emailError.style.display = 'none';
+                      }
+                    });
+                  </script>
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2024 All Rights Reserved by <a href="#">Dreamdev Academy</a></p>
+    </div>
+</footer>
+<!-- Footer End -->
+    
+
+<!-- Chat Box code start  -->
+            
+<div class="chatbot-icon" id="chatbotIcon">💬</div>
+<div class="chatbox" id="chatbox">
+    <div class="chatbox-header">Chat with Us</div>
+    <div class="chatbox-body" id="chatboxBody"></div>
+    <div class="chatbox-footer">
+        <input type="text" id="chatInput" placeholder="Type here..." />
+        <button id="chatSendBtn">Send</button>
+    </div>
+</div>
+
+<script>
+    const chatbotIcon = document.getElementById('chatbotIcon');
+    const chatbox = document.getElementById('chatbox');
+    const chatboxBody = document.getElementById('chatboxBody');
+    const chatInput = document.getElementById('chatInput');
+    const chatSendBtn = document.getElementById('chatSendBtn');
+
+    let chatStep = 0;
+    const brochureURL = 'Dreamdev- Company Profile .pdf'; // Path to your brochure PDF file
+    const courses = [
+        'PHP FullStack Developer',
+        'AWS DevOps',
+        'Python FullStack Developer',
+        'Digital Marketing',
+        'Flutter Mobile App Development',
+        'Java FullStack Developer',
+        'React JS',
+        'Node JS',
+        'Cyber Security',
+        'Scrum Master',
+        'Auto Cad',
+        'A.I and M.L',
+        'Software Testing'
+    ];
+
+    chatbotIcon.onclick = () => {
+        chatbox.style.display = chatbox.style.display === 'flex' ? 'none' : 'flex';
+        if (chatStep === 0) {
+            addMessage("Hello! What's your name?", 'bot');
+            chatStep = 1;
+        }
+    };
+
+    function addMessage(content, sender) {
+        const message = document.createElement('div');
+        message.className = `message ${sender}`;
+        message.textContent = content;
+        chatboxBody.appendChild(message);
+        chatboxBody.scrollTop = chatboxBody.scrollHeight;
+    }
+
+    function addOptions(options, callback) {
+        const optionsContainer = document.createElement('div');
+        optionsContainer.className = 'options-container';
+
+        options.forEach(option => {
+            const button = document.createElement('button');
+            button.className = 'option-button';
+            button.textContent = option;
+            button.onclick = () => {
+                addMessage(option, 'user');
+                document.querySelector('.options-container').remove();
+                callback(option);
+            };
+            optionsContainer.appendChild(button);
+        });
+
+        chatboxBody.appendChild(optionsContainer);
+        chatboxBody.scrollTop = chatboxBody.scrollHeight;
+    }
+
+    function handleOptionClick(option) {
+        if (option === 'Course Brochure') {
+            addMessage("Please select a specific domain:", 'bot');
+            addOptions(courses, handleCourseSelection);
+        } else if (option === 'Book Appointment') {
+            addMessage("Please select a date for your appointment using the date picker below:", 'bot');
+            showDatePicker();
+        }
+    }
+
+    function handleCourseSelection(course) {
+        addMessage(`You selected ${course}. The brochure will now download.`, 'bot');
+        window.location.href = brochureURL; // Trigger PDF download
+
+        setTimeout(() => {
+            addMessage("Would you like to connect with a counselor for more details?", 'bot');
+            addOptions(['Connect Counselor', 'No, Thanks'], handleCounselorOption);
+        }, 1000); // Add a delay before showing the options
+    }
+
+    function handleCounselorOption(choice) {
+        if (choice === 'Connect Counselor') {
+            addMessage("A counselor will contact you shortly. Thank you!", 'bot');
+        } else {
+            addMessage("Let us know if you need further assistance. Have a great day!", 'bot');
+        }
+    }
+
+    chatSendBtn.onclick = () => {
+        const userInput = chatInput.value.trim();
+        if (!userInput) return;
+
+        addMessage(userInput, 'user');
+        chatInput.value = '';
+
+        if (chatStep === 1) {
+            const nameRegex = /^[A-Za-z\s]+$/;
+            if (nameRegex.test(userInput)) {
+                addMessage("Thanks, " + userInput + "! Please enter your mobile number:", 'bot');
+                chatStep = 2;
+            } else {
+                addMessage("Invalid name. Please enter only alphabets:", 'bot');
+            }
+        } else if (chatStep === 2) {
+            const mobileNumberRegex = /^\d{10}$/;
+            if (mobileNumberRegex.test(userInput)) {
+                addMessage("Mobile number received! Please enter your email:", 'bot');
+                chatStep = 3;
+            } else {
+                addMessage("Invalid mobile number. Please enter a valid 10-digit number:", 'bot');
+            }
+        } else if (chatStep === 3) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (emailRegex.test(userInput)) {
+                addMessage("Email received! Please choose an option below:", 'bot');
+                addOptions(['Course Brochure', 'Book Appointment'], handleOptionClick);
+                chatStep = 4;
+            } else {
+                addMessage("Invalid email. Please enter a valid email address:", 'bot');
+            }
+        }
+    };
+
+    function showDatePicker() {
+        const datePicker = document.createElement('input');
+        datePicker.type = 'date';
+        datePicker.className = 'date-picker';
+        datePicker.min = new Date().toISOString().split('T')[0];
+        datePicker.onchange = function () {
+            addMessage(`Your appointment is scheduled for ${datePicker.value}. Thank you!`, 'bot');
+            chatStep = 0;
+        };
+        chatboxBody.appendChild(datePicker);
+        chatboxBody.scrollTop = chatboxBody.scrollHeight;
+    }
+
+    chatInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            chatSendBtn.click();
+        }
+    });
+</script>
+<!-- Chat Box code End  -->
+<!--  Whatsapp Code HTML Start -->
+<section class="whatsappcode">
+    <div class="whatsapp-container">
+        <a href="https://wa.me/yourphonenumber" class="whatsapp-button" target="_blank" aria-label="Chat on WhatsApp">
+            <div class="icon">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
+            </div>
+            <span class="text">Chat with Us</span>
+        </a>
+    </div>
+</section>
+<!-- Whatsapp Code HTML END -->
+
+<!-- Whatsapp Java Script-->
+<script>
+    document.querySelector('.whatsapp-button').addEventListener('click', function () {
+        console.log('WhatsApp button clicked!');
+    });
+</script> 
+
+<!-- Whatsapp Code HTML Start -->
+<section class="whatsappcode">
+    <div class="whatsapp-container">
+        <a href="https://wa.me/yourphonenumber" class="whatsapp-button" target="_blank" aria-label="Chat on WhatsApp">
+            <div class="icon">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
+            </div>
+            <span class="text">Chat with Us</span>
+        </a>
+    </div>
+</section>
+<!-- Whatsapp Code HTML END -->
+
+<!-- Whatsapp Java Script-->
+<script>
+    document.querySelector('.whatsapp-button').addEventListener('click', function () {
+        console.log('WhatsApp button clicked!');
+    });
+</script>
+
+    <!-- Add Bootstrap JS and dependencies -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   
+
+
+    <!-- Back to Top -->
+    <!--<a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>-->
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>

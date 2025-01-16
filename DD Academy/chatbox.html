@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .chatbot-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: #007bff;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            z-index: 999;
+        }
+
+        .chatbox {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            width: 300px;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: none;
+            flex-direction: column;
+        }
+
+        .chatbox-header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            text-align: center;
+        }
+
+        .chatbox-body {
+            padding: 10px;
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+
+        .chatbox-footer {
+            padding: 10px;
+            display: flex;
+        }
+
+        .chatbox-footer input {
+            flex-grow: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .chatbox-footer button {
+            margin-left: 10px;
+            padding: 8px 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .chatbox-footer button:hover {
+            background-color: #0056b3;
+        }
+
+        .message {
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .message.bot {
+            background-color: #f1f1f1;
+        }
+
+        .message.user {
+            background-color: #007bff;
+            color: white;
+            text-align: right;
+        }
+
+        .options-container {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-top: 10px;
+        }
+
+        .option-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .option-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Invalid mail accpecting -->
+
+
+    
+    <div class="chatbot-icon" id="chatbotIcon">💬</div>
+    <div class="chatbox" id="chatbox">
+        <div class="chatbox-header">Chat with Us</div>
+        <div class="chatbox-body" id="chatboxBody"></div>
+        <div class="chatbox-footer">
+            <input type="text" id="chatInput" placeholder="Type here..." />
+            <button id="chatSendBtn">Send</button>
+        </div>
+    </div>
+
+    <script>
+        const chatbotIcon = document.getElementById('chatbotIcon');
+        const chatbox = document.getElementById('chatbox');
+        const chatboxBody = document.getElementById('chatboxBody');
+        const chatInput = document.getElementById('chatInput');
+        const chatSendBtn = document.getElementById('chatSendBtn');
+
+        let chatStep = 0;
+        const brochureURL = 'Dreamdev- Company Profile .pdf'; // Path to your brochure PDF file
+        const courses = [
+            'PHP FullStack Developer',
+            'AWS DevOps',
+            'Python FullStack Developer',
+            'Digital Marketing',
+            'Flutter Mobile App Development',
+            'Java FullStack Developer',
+            'React JS',
+            'Node JS',
+            'Cyber Security',
+            'Scrum Master',
+            'Auto Cad',
+            'A.I and M.L',
+            'Software Testing'
+        ];
+
+        chatbotIcon.onclick = () => {
+            chatbox.style.display = chatbox.style.display === 'flex' ? 'none' : 'flex';
+            if (chatStep === 0) {
+                addMessage("Hello! What's your name?", 'bot');
+                chatStep = 1;
+            }
+        };
+
+        function addMessage(content, sender) {
+            const message = document.createElement('div');
+            message.className = `message ${sender}`;
+            message.textContent = content;
+            chatboxBody.appendChild(message);
+            chatboxBody.scrollTop = chatboxBody.scrollHeight;
+        }
+
+        function addOptions(options, callback) {
+            const optionsContainer = document.createElement('div');
+            optionsContainer.className = 'options-container';
+
+            options.forEach(option => {
+                const button = document.createElement('button');
+                button.className = 'option-button';
+                button.textContent = option;
+                button.onclick = () => {
+                    addMessage(option, 'user');
+                    document.querySelector('.options-container').remove();
+                    callback(option);
+                };
+                optionsContainer.appendChild(button);
+            });
+
+            chatboxBody.appendChild(optionsContainer);
+            chatboxBody.scrollTop = chatboxBody.scrollHeight;
+        }
+
+        function handleOptionClick(option) {
+            if (option === 'Course Brochure') {
+                addMessage("Please select a specific domain:", 'bot');
+                addOptions(courses, handleCourseSelection);
+            } else if (option === 'Book Appointment') {
+                addMessage("Please select a date for your appointment using the date picker below:", 'bot');
+                showDatePicker();
+            }
+        }
+
+        function handleCourseSelection(course) {
+            addMessage(`You selected ${course}. The brochure will now download.`, 'bot');
+            window.location.href = brochureURL; // Trigger PDF download
+
+            setTimeout(() => {
+                addMessage("Would you like to connect with a counselor for more details?", 'bot');
+                addOptions(['Connect Counselor', 'No, Thanks'], handleCounselorOption);
+            }, 1000); // Add a delay before showing the options
+        }
+
+        function handleCounselorOption(choice) {
+            if (choice === 'Connect Counselor') {
+                addMessage("A counselor will contact you shortly. Thank you!", 'bot');
+            } else {
+                addMessage("Let us know if you need further assistance. Have a great day!", 'bot');
+            }
+        }
+
+        chatSendBtn.onclick = () => {
+            const userInput = chatInput.value.trim();
+            if (!userInput) return;
+
+            addMessage(userInput, 'user');
+            chatInput.value = '';
+
+            if (chatStep === 1) {
+                const nameRegex = /^[A-Za-z\s]+$/;
+                if (nameRegex.test(userInput)) {
+                    addMessage("Thanks, " + userInput + "! Please enter your mobile number:", 'bot');
+                    chatStep = 2;
+                } else {
+                    addMessage("Invalid name. Please enter only alphabets:", 'bot');
+                }
+            } else if (chatStep === 2) {
+                const mobileNumberRegex = /^\d{10}$/;
+                if (mobileNumberRegex.test(userInput)) {
+                    addMessage("Mobile number received! Please enter your email:", 'bot');
+                    chatStep = 3;
+                } else {
+                    addMessage("Invalid mobile number. Please enter a valid 10-digit number:", 'bot');
+                }
+            } else if (chatStep === 3) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (emailRegex.test(userInput)) {
+                    addMessage("Email received! Please choose an option below:", 'bot');
+                    addOptions(['Course Brochure', 'Book Appointment'], handleOptionClick);
+                    chatStep = 4;
+                } else {
+                    addMessage("Invalid email. Please enter a valid email address:", 'bot');
+                }
+            }
+        };
+
+        function showDatePicker() {
+            const datePicker = document.createElement('input');
+            datePicker.type = 'date';
+            datePicker.className = 'date-picker';
+            datePicker.min = new Date().toISOString().split('T')[0];
+            datePicker.onchange = function () {
+                addMessage(`Your appointment is scheduled for ${datePicker.value}. Thank you!`, 'bot');
+                chatStep = 0;
+            };
+            chatboxBody.appendChild(datePicker);
+            chatboxBody.scrollTop = chatboxBody.scrollHeight;
+        }
+
+        chatInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                chatSendBtn.click();
+            }
+        });
+    </script>
+</body>
+</html>

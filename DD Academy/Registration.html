@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institute Training Registration Form</title>
+    <style>
+        body {
+           
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            
+    h1{
+        font-size: 34px;
+    }
+    h2{
+        font-size: 24px;
+    }
+    h3{
+        font-size: 22px;
+    }
+    h4{
+        font-size: 20px;
+    }
+    h5{
+        font-size: 18px;
+    }
+    h6{
+        font-size: 16px;
+    }
+    p{
+        font-size: 16px;
+    }
+
+
+        }
+        .container {
+            width: 100%;
+            max-width: 500px;
+            max-height: 700px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+        }
+        .container img{
+            width:100% ;
+            height:100px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group textarea {
+            resize: vertical;
+        }
+        button {
+            background-color: #ff9a12;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #fed02c;
+        }
+        /* Media queries for smaller screens */
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 25px;
+            }
+            button {
+                font-size: 14px;
+                padding: 10px;
+            }
+            .container img{
+            width:100% ;
+            height:100px;
+            
+        }
+        .container{
+            margin-top: 130px;
+        }
+       
+
+        .form-group label{
+            font-size: 20px;
+        }
+        }
+        @media (max-width: 480px) {
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                font-size: 17px;
+                padding: 8px;
+            }
+            button {
+                font-size: 17px;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="assets/Images/Trainings logo.png">
+        <h2>Registration Form</h2>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required pattern="[A-Za-z\s]+"  title="Only alphabets and spaces are allowed" >
+                
+        <script>
+            const nameInput = document.getElementById('name');
+        
+            nameInput.addEventListener('input', function () {
+                const value = nameInput.value;
+                if (/[^A-Za-z\s]/.test(value)) {
+                    nameInput.value = value.replace(/[^A-Za-z\s]/g, ''); // Remove invalid characters
+                }
+                // Capitalize the first letter of each word
+                 nameInput.value = nameInput.value
+                .toLowerCase()
+                .replace(/\b\w/g, (char) => char.toUpperCase());
+            });
+        </script>
+        
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <div id="emailError" class="error-message">
+                    Email must start with alphabets and later contain Numbers.
+                </div>
+                <style>
+                .form-group {
+                    margin-bottom: 15px;
+                }
+                .error-message {
+                    color: red;
+                    font-size: 0.9em;
+                    display: none; /* Initially hidden */
+                }
+                </style>
+                <script>
+                    const emailInput = document.getElementById('email');
+                    const emailError = document.getElementById('emailError');
+            
+                    emailInput.addEventListener('input', function () {
+                        const emailPattern = /^[a-zA-Z]+\d.*@.+\..+$/; // Email must start with alphabets followed by numbers
+                        if (!emailPattern.test(this.value)) {
+                            emailError.style.display = 'block'; // Show error message
+                        } else {
+                            emailError.style.display = 'none'; // Hide error message
+                        }
+                    });
+            
+                    document.getElementById('emailForm').addEventListener('submit', function (e) {
+                        if (emailError.style.display === 'block') {
+                            alert('Please correct the email format before submitting.');
+                            e.preventDefault(); // Prevent form submission
+                        }
+                    });
+                </script>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input 
+                type="text" 
+                id="phone" 
+                name="phone" 
+                placeholder="Enter your phone number" 
+                maxlength="10" 
+                required 
+                pattern="\d{10}" 
+                title="Please enter exactly 10 digits"
+            >
+            <script>
+                document.getElementById('phone').addEventListener('input', function(e) {
+                    // Remove any non-numeric characters
+                    this.value = this.value.replace(/\D/g, '');
+                });
+        
+                document.getElementById('numberForm').addEventListener('submit', function(e) {
+                    const phoneInput = document.getElementById('phone').value;
+                    if (phoneInput.length !== 10) {
+                        alert('Phone number must be exactly 10 digits.');
+                        e.preventDefault(); // Prevent form submission
+                    }
+                });
+            </script>
+            </div>
+            <div class="form-group">
+                <label for="course">Select Course</label>
+                <select id="course" name="course" required>
+                    <option value="">-- Select Course --</option>
+                    <option value="devops with AWS">Devops with AWS</option>
+                    <option value="ai-ml">AI/ML</option>
+                    <option value="auto-cad">Auto cad</option>
+                    <option value="software testing">Software Testing</option>
+                    <option value="data-analytics">Data Analytics</option>
+                    <option value="scrum-master">Scrum Master</option>
+                    <option value="flutter mobile app Development">Flutter Mobile App Development</option>
+                    <option value="python fullstack">Python Fullstack</option>
+                    <option value="java fullstack">Java Fullstack</option>
+                    <option value="php fullstack">PHP Fullstack</option>
+                    <option value="react js">React Js</option>
+                    <option value="node js">Node Js</option>
+                    <option value="cyber security">Cyber Security</option>
+                    <option value="mern stack">Mern Stack</option>
+                    
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="comments">Message</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Message"></textarea>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>
